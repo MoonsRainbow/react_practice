@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html>
+	<body>
+		<div id="root"></div>
+	</body>
+	<script src="https://unpkg.com/react@17.0.2/umd/react.production.min.js"></script>
+	<script src="https://unpkg.com/react-dom@17.0.2/umd/react-dom.production.min.js"></script>
+	<script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+	<script type="text/babel">
+		function TimeConverter() {
+			const [amount, setAmount] = React.useState(0);
+			const [isFlipped, setFlipped] = React.useState(false);
+			const onChange = (event) => {
+				setAmount(event.target.value);
+			};
+			const reset = () => {
+				setAmount(0);
+			};
+			const flip = () => {
+				reset();
+				setFlipped((current) => !current);
+			};
+			return (
+				<div>
+					<div>
+						<label htmlFor="minutes">Minutes</label>
+						<input
+							id="minutes"
+							type="number"
+							placeholder="Minutes"
+							value={isFlipped ? amount * 60 : amount}
+							onChange={onChange}
+							disabled={isFlipped}
+						/>
+					</div>
+					<div>
+						<label htmlFor="hours">Hours</label>
+						<input
+							id="hours"
+							type="number"
+							placeholder="Hours"
+							value={isFlipped ? amount : Math.round(amount / 60)}
+							onChange={onChange}
+							disabled={!isFlipped}
+						/>
+					</div>
+					<button onClick={reset}>Reset</button>
+					<button onClick={flip}>Flip</button>
+				</div>
+			);
+		}
+
+		function DistanceConverter() {
+			const [amount, setAmount] = React.useState(0);
+			const [isFlipped, setFlipped] = React.useState(false);
+			const onChange = (event) => {
+				setAmount(event.target.value);
+			};
+			const reset = () => {
+				setAmount(0);
+			};
+			const flip = () => {
+				reset();
+				setFlipped((current) => !current);
+			};
+			return (
+				<div>
+					<div>
+						<label htmlFor="kilometers">Kilometers</label>
+						<input
+							id="kilometers"
+							type="number"
+							placeholder="Kilometers"
+							value={isFlipped ? amount * 1.6 : amount}
+							onChange={onChange}
+							disabled={isFlipped}
+						/>
+					</div>
+					<div>
+						<label htmlFor="miles">Miles</label>
+						<input
+							id="miles"
+							type="number"
+							placeholder="Miles"
+							value={isFlipped ? amount : amount / 1.6}
+							onChange={onChange}
+							disabled={!isFlipped}
+						/>
+					</div>
+					<button onClick={reset}>Reset</button>
+					<button onClick={flip}>Flip</button>
+				</div>
+			);
+		}
+
+		function App() {
+			const [index, setIndex] = React.useState("0");
+			const onSelect = (event) => {
+				setIndex(event.target.value);
+			};
+			return (
+				<div>
+					<h1>Super Converter</h1>
+					<select onChange={onSelect}>
+						<option value="0">TimeConverter</option>
+						<option value="1">DistanceConverter</option>
+					</select>
+					<hr />
+					{index === "0" && <TimeConverter />}
+					{index === "1" && <DistanceConverter />}
+				</div>
+			);
+		}
+		const root = document.getElementById("root");
+		ReactDOM.render(<App />, root);
+	</script>
+</html>
