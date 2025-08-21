@@ -16,7 +16,7 @@ function App() {
 					element={<HomeRoute />}
 				/>
 				<Route
-					path="/movie"
+					path="/movie/:id"
 					element={<DetailRoute />}
 				/>
 				<Route

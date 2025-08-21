@@ -1,3 +1,6 @@
-export type { MovieInterface } from "./Movie";
-export type { TorrentInterface } from "./Torrent";
-export type { ApiResponseInterface } from "./ApiResponse";
+export type { TorrentType } from "./Torrent";
+export type { MovieType, MovieApiResponseType } from "./MovieApiResponse";
+export type {
+	MovieListType,
+	MovieListApiResponseType,
+} from "./MovieListApiResponse";

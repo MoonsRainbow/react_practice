@@ -1,6 +1,7 @@
-import { TorrentInterface } from "./Torrent";
+import { TorrentType } from "./Torrent";
+import { ApiResponseType } from "./ApiResponse";
 
-export type MovieInterface = {
+export type MovieType = {
 	id: number;
 	url: string;
 	imdb_code: string;
@@ -12,9 +13,9 @@ export type MovieInterface = {
 	rating: number;
 	runtime: number;
 	genres: string[];
-	summary: string;
+	like_count: number;
+	description_intro: string;
 	description_full: string;
-	synopsis: string;
 	yt_trailer_code: string;
 	language: string;
 	mpa_rating: string;
@@ -23,8 +24,11 @@ export type MovieInterface = {
 	small_cover_image: string;
 	medium_cover_image: string;
 	large_cover_image: string;
-	state: string;
-	torrents: TorrentInterface[];
+	torrents: TorrentType[];
 	date_uploaded: string;
 	date_uploaded_unix: number;
+};
+
+export type MovieApiResponseType = ApiResponseType & {
+	data: { movie: MovieType };
 };
