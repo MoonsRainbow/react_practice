@@ -1,4 +1,4 @@
-export interface TorrentInterface {
+export type TorrentType = {
 	url: string;
 	hash: string;
 	quality: string;
@@ -13,4 +13,4 @@ export interface TorrentInterface {
 	size_bytes: number;
 	date_uploaded: string;
 	date_uploaded_unix: number;
-}
+};
