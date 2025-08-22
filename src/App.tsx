@@ -1,5 +1,6 @@
 import HomeRoute from "routes/Home";
 import DetailRoute from "routes/Detail";
+import SandboxRouter from "routes/Sandbox";
 import {
 	BrowserRouter as Router,
 	Routes,
@@ -11,13 +12,18 @@ function App() {
 	return (
 		<Router>
 			<Routes>
-				<Route
+				{/* <Route
 					index
 					element={<HomeRoute />}
-				/>
-				<Route
+					/>
+					<Route
 					path="/movie/:id"
 					element={<DetailRoute />}
+					/> */}
+				<Route
+					index
+					// path="/sandbox"
+					element={<SandboxRouter />}
 				/>
 				<Route
 					path="*"

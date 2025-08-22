@@ -1,9 +1,6 @@
 import { createGlobalStyle } from "styled-components";
 
 export const GlobalStyle = createGlobalStyle`
-@import url("https://fonts.googleapis.com/css2?family=Noto+Sans:wght@400;600;700;900&display=swap");
-@import url("https://unpkg.com/lucide-static@latest/font/lucide.css");
-
 /* http://meyerweb.com/eric/tools/css/reset/
    v2.0 | 20110126
    License: none (public domain)
