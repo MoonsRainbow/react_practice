@@ -1,3 +1,6 @@
+@import url("https://fonts.googleapis.com/css2?family=Noto+Sans:wght@400;600;700;900&display=swap");
+@import url("https://unpkg.com/lucide-static@latest/font/lucide.css");
+
 :root {
 	--color-main: rgba(0, 0, 0, 0.8);
 }
