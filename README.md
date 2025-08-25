@@ -2,7 +2,7 @@
 
 노마드코더 ReactJS로 영화 웹 서비스 만들기
 
-2025.08.18~
+2025.08.18~25 완료
 
 # Getting Started with Create React App
 
