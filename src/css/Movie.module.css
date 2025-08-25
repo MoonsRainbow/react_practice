@@ -1,0 +1,6 @@
+.movieCard {
+	display: flex;
+	padding: 16px;
+	border-radius: 10px;
+	background-color: #2a2a2a;
+}
