@@ -1,5 +1,5 @@
-import HomeRoute from "routes/Home";
-import DetailRoute from "routes/Detail";
+// import HomeRoute from "routes/Home";
+// import DetailRoute from "routes/Detail";
 import SandboxRouter from "routes/Sandbox";
 import {
 	BrowserRouter as Router,
